@@ -1,4 +1,4 @@
-##安装
+## 安装
 ```
 npm i @winning-plugin/win-ipt-qiankun-utils --save
 ```
