@@ -1,0 +1,11 @@
+{
+  "name": "@winning-plugin/win-ipt-qiankun-utils",
+  "version": "1.0.0",
+  "description": "住院前端组件工具",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "灰灰",
+  "license": "ISC"
+}
