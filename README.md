@@ -49,7 +49,7 @@ export {
 </template>
 
 <script>
-import IptQianKunView from '@winning-plugin/win-ipt-qiankun-utils'
+import {IptQianKunView} from '@winning-plugin/win-ipt-qiankun-utils'
 export default {
   name: 'App',
   components: {
