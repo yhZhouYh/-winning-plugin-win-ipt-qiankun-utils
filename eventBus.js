@@ -45,6 +45,6 @@ class EventBus {
   }
 }
 
-export default function initEvent (Vue, vm, cache, keyIdentify) {
-  return new EventBus(Vue, vm, cache, keyIdentify)
+export default function initEvent (Vue, cache, keyIdentify) {
+  return new EventBus(Vue, cache, keyIdentify)
 }
