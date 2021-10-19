@@ -1,3 +1,8 @@
+##安装
+```
+npm i @winning-plugin/win-ipt-qiankun-utils --save
+```
+
 ## main.js
 
 ~~if (!window.eventBus) {
