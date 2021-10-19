@@ -1,9 +1,9 @@
 
 class EventBus {
-  install = Function
-  keyIdentify =''
-  events = {}
   constructor (Vue, cache, qiankunConfig) {
+    this.install = Function
+    this.keyIdentify =''
+    this.events = {}
     this.init(Vue, cache, qiankunConfig)
   }
 

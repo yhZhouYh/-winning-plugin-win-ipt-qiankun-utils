@@ -1,10 +1,9 @@
-
 import initEvent from './eventBus'
 
-export default class QianKunVue {
-  instance = null
-  eventBus = null
+class QianKunVue {
   constructor (VueOptions, config) {
+    this.instance = null
+    this.eventBus = null
     this.VueOptions = VueOptions
     this.config = config
     // this.init()
@@ -81,7 +80,7 @@ export default class QianKunVue {
   }
 }
 
-export function createApp (VueOptions, config = { cache: false }, initOptions) {
+export default function createApp (VueOptions, config = { cache: false }, initOptions) {
   const app = new QianKunVue(VueOptions, config)
   if (!window.__POWERED_BY_QIANKUN__ && initOptions) {
     app.render(initOptions)

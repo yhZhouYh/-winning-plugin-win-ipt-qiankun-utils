@@ -1,10 +1,11 @@
 {
   "name": "@winning-plugin/win-ipt-qiankun-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "住院前端组件工具",
-  "main": "index.js",
+  "main": "./dist/winIptQianKunUtils.umd.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vue-cli-service build --target lib --name winIptQianKunUtils index.js"
   },
   "author": "灰灰",
   "license": "ISC"
