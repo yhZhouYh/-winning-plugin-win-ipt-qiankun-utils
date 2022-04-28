@@ -1,3 +1,8 @@
+## 安装
+```
+npm i @winning-plugin/win-ipt-qiankun-utils --save
+```
+
 ## main.js
 
 ~~if (!window.eventBus) {
@@ -7,7 +12,7 @@
 ```
 // main.js中初始化
 
-import { createApp } from './win-ipt-qiankun-utils'
+import { createApp } from '@winning-plugin/win-ipt-qiankun-utils'
 const {
   mount,
   bootstrap,
@@ -44,7 +49,7 @@ export {
 </template>
 
 <script>
-import IptQianKunView from './win-ipt-qiankun-utils/iptQianKunView'
+import {IptQianKunView} from '@winning-plugin/win-ipt-qiankun-utils'
 export default {
   name: 'App',
   components: {
