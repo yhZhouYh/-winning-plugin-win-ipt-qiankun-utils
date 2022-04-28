@@ -1,14 +1,19 @@
 export default {
+  props: {
+    components: {
+      type: Array,
+      default: () => []
+    },
+  },
   data () {
     return {
       currentCom: {},
-      components: [],
       qiankunConfig: this.$root.$options.qiankunConfig,
       com: {}
     }
   },
   methods: {
-    getCurrentComponent (components) {
+    getCurrentRouterComponent (components) {
       components.find((item, i) => {
         if (this.qiankunConfig && this.qiankunConfig.componentName === item.name) {
           this.com = item
@@ -19,14 +24,21 @@ export default {
         }
       })
       return this.com
+    },
+    getCurrentComponent (components) {
+      return components.find(item => this.qiankunConfig && this.qiankunConfig.componentName === item.name)
     }
 
   },
   created () {
     const router = this.$root.$options.router
-    this.components = (router && router.options.routes) || []
-    const com = this.getCurrentComponent(this.components)
-    this.currentCom = com ? com.component : this.components[0].component
+    if (router) {
+      const com = this.getCurrentComponent(router.options.routes)
+      this.currentCom = com ? com.component : this.components[0].component
+    } else {
+      this.currentCom = this.getCurrentComponent(this.components)
+    }
+    
   },
   render (h) {
     return h('component', {

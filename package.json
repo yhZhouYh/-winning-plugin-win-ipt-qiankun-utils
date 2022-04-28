@@ -1,6 +1,6 @@
 {
   "name": "@winning-plugin/win-ipt-qiankun-utils",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "住院前端组件工具",
   "main": "./dist/winIptQianKunUtils.umd.min.js",
   "scripts": {

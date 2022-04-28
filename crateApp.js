@@ -55,13 +55,13 @@ class QianKunVue {
       eventBus: this.eventBus
     }
   }
-  async update () {
+  update () {
     console.log(`${process.env.VUE_APP_MODULE_NAME} app update`)
   }
-  async bootstrap () {
+  bootstrap () {
     console.log(`${process.env.VUE_APP_MODULE_NAME} app bootstraped`)
   }
-  async mount (props) {
+  mount (props) {
     props.name && (sessionStorage.setItem('CURRENT_APP_NAME', props.name))
     const { eventBus } = this.render(props)
     if (this.config.cache) {
@@ -71,7 +71,7 @@ class QianKunVue {
       })
     }
   }
-  async unmount () {
+  unmount () {
     if (!this.config.cache) {
       this.instance.$destroy()
       this.instance.$el.innerHTML = ''
